@@ -82,10 +82,10 @@ Your finished project must include all of the following requirements:
 
 ### Required best practices
 
-- [ ] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
-- [ ] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
+- [x] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
+- [x] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
 - [ ] Consistent quotation usage.
-- [ ] Spell-check.
+- [x] Spell-check.
 - [ ] Schedule time to review, refine and reassess your work.
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
@@ -93,7 +93,7 @@ It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wik
 ### Tips and Gotchas
 
 - [x] Test your API and inspect the data in Chrome, Postman or HTTPie _before_ writing the code for the request(s). See screenshots at the root of the project.
-- [ ] Try not to hammer your API while developing. Infinite loops in your code might trigger hundreds of requests!
+- [x] Try not to hammer your API while developing. Infinite loops in your code might trigger hundreds of requests!
 - [ ] The Pokemon API is a slightly harder challenge because a single network request might not be enough to get all the data you need.
 - [x] Running `npm` commands in the wrong folder will not work. **Be aware of what folder you're in** when working in the command line.
 - [ ] The `start` process can sometimes choke after adding new dependencies and may need to be restarted.
@@ -104,7 +104,7 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
 
-- [ ] Make the Character component more complex and break it into several subcomponents.
+- [x] Make the Character component more complex and break it into several subcomponents.
 - [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
 - [ ] Use Promise.all to resolve an array of promises.
 - [ ] Create transitions or animations with styled-components.

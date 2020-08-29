@@ -5,6 +5,7 @@ import axios from 'axios';
 const Movie = (movieUrl) => {
     console.log ('this is a movie ', movieUrl.movieUrl);
     const [movie, setMovie] = useState();
+    const [episode, setEpisode] = useState();
     useEffect (() =>  {
       axios
         .get (movieUrl.movieUrl)
@@ -12,6 +13,7 @@ const Movie = (movieUrl) => {
         .then ((res) => {
           console.log ('Results: ', res.data);
           setMovie(res.data.title);
+          setEpisode(res.data.episode_id);
         })
         .catch ((err) => {
           console.log ('Error occured: ', err);
@@ -22,7 +24,7 @@ const Movie = (movieUrl) => {
   return (
     
      <div>
-      <p>{movie} </p>
+      <p>{movie}. Episode: {episode}</p>
      </div>
    
   )

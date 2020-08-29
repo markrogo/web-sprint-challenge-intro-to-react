@@ -1,6 +1,6 @@
 import React from "react";
-// placeholder for the movie component 
-// import styled from "styled-components"; // will need this for next part of project
+import Movies from './Movies'
+import styled from "styled-components";
 
 
 const Character = (charData) => {
@@ -11,7 +11,8 @@ const Character = (charData) => {
         <h2>Character: {charInfo.name} </h2>
         <h3> Height: {charInfo.height}</h3> 
         <h3> Birth year: {charInfo.birth_year}</h3>
-        {/* do something here to get a get a list of films!! */}
+        <Movies movies={charInfo.films} />
+        
        </div>
     );
   };

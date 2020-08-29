@@ -3,6 +3,13 @@ import axios from 'axios';
 import Character from './components/Character'
 import './App.css';
 
+// let smallerData = [];
+
+// const Compress = (data) => {
+//   smallerData = data.map(({name, height, birth_year, films, url }) => {
+//     return {name, height, birth_year, films, url}
+//   })
+// }
 const App = () => {
   const [chars, setChars] = useState([]); // to hold char data
  
@@ -12,6 +19,7 @@ const App = () => {
       
       .then ((res) => {
         console.log ('Results: ', res.data); // initial check for data being received
+        // let smallerData =Compress (res.data); attempted to clean the data
         setChars(res.data.results);
       })
       .catch ((err) => {

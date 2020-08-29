@@ -30,11 +30,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+<!-- At its core, react is simply a library written in JS that makes it easy to build components and render them to the screen whenever there's a change in data. Because it only updates the components that need to change it can be performance efficient. Because it works with components, it allows for small, modular code to be created -->
+
+
 1. Describe component state.
+
+<!-- State is "part" of the component in that it holds information about what is in the component. For React to do it's magic, it needs to know when state changes to trigger a re-render. So changes in data need to be reflected through variables that are defined as containing "state information" -->
 
 1. Describe props.
 
+<!-- Props are how you move data between components in React (analogous to parameters used with functions). Props flow downward from Parent to Child. -->
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+<!-- Side effects are things that occur outside of the function scope but affect something in your React app's component. Examples include grabbing data from a API and running a timer. We need to use the useEffect hook to deal with them. We can have the effect hook do it's work by linking it's action to a dependency array: i.e. only run when something changes in the values defined by the dependency array. -->
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

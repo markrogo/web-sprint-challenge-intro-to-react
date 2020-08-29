@@ -1,17 +1,42 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+import Character from './components/Character'
 import './App.css';
 
-const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+// let smallerData = [];
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+// const Compress = (data) => {
+//   smallerData = data.map(({name, height, birth_year, films, url }) => {
+//     return {name, height, birth_year, films, url}
+//   })
+// }
+const App = () => {
+  const [chars, setChars] = useState([]); // to hold char data
+ 
+  useEffect (() => {
+    axios
+      .get (`https://swapi.py4e.com/api/people/`) // api call
+      
+      .then ((res) => {
+        console.log ('Results: ', res.data); // initial check for data being received
+        // let smallerData =Compress (res.data); attempted to clean the data
+        setChars(res.data.results);
+      })
+      .catch ((err) => {
+        console.log ('Error occured: ', err);
+      })
+
+  }, []); 
+
+  console.log (chars);
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Star Wars Characters</h1>
+      {chars.map((char) => {
+        console.log (char.name)
+        return <Character key={char.name} charData={char} />
+      })}
     </div>
   );
 }

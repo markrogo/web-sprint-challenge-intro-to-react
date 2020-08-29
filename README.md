@@ -30,11 +30,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+<!-- At its core, react is simply a library written in JS that makes it easy to build components and render them to the screen whenever there's a change in data. Because it only updates the components that need to change it can be performance efficient. Because it works with components, it allows for small, modular code to be created -->
+
+
 1. Describe component state.
+
+<!-- State is "part" of the component in that it holds information about what is in the component. For React to do it's magic, it needs to know when state changes to trigger a re-render. So changes in data need to be reflected through variables that are defined as containing "state information" -->
 
 1. Describe props.
 
+<!-- Props are how you move data between components in React (analogous to parameters used with functions). Props flow downward from Parent to Child. -->
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+<!-- Side effects are things that occur outside of the function scope but affect something in your React app's component. Examples include grabbing data from a API and running a timer. We need to use the useEffect hook to deal with them. We can have the effect hook do it's work by linking it's action to a dependency array: i.e. only run when something changes in the values defined by the dependency array. -->
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -42,29 +51,29 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-- [ ] Push commits: `git push origin <firstName-lastName>`
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: `git push origin <firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [x] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
+- [x] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
+- [x] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [x] Push commits: `git push origin <firstName-lastName>`
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use ONE of the following APIs:
+- [x] Use ONE of the following APIs:
   - [Star Wars API](https://swapi.dev/)
   - [Alternate Star Wars API](https://swapi.py4e.com/)
   - [The Rick and Morty API](https://rickandmortyapi.com/)
   - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
-- [ ] Use the documentation and Google to learn how to fetch characters from your API.
-- [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
-- [ ] Set the list of characters into state.
+- [x] Use the documentation and Google to learn how to fetch characters from your API.
+- [x] Obtain a list of characters. One or several requests might be needed, depending on the API.
+- [x] Set the list of characters into state.
 - [ ] Render your characters to the screen:
   - Build a React component named 'Character' to render an individual character.
   - Map over the list in state, and for each character render a Character to the page.
@@ -73,20 +82,20 @@ Your finished project must include all of the following requirements:
 
 ### Required best practices
 
-- [ ] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
-- [ ] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
+- [x] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
+- [x] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
 - [ ] Consistent quotation usage.
-- [ ] Spell-check.
+- [x] Spell-check.
 - [ ] Schedule time to review, refine and reassess your work.
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
 
 ### Tips and Gotchas
 
-- [ ] Test your API and inspect the data in Chrome, Postman or HTTPie _before_ writing the code for the request(s). See screenshots at the root of the project.
-- [ ] Try not to hammer your API while developing. Infinite loops in your code might trigger hundreds of requests!
+- [x] Test your API and inspect the data in Chrome, Postman or HTTPie _before_ writing the code for the request(s). See screenshots at the root of the project.
+- [x] Try not to hammer your API while developing. Infinite loops in your code might trigger hundreds of requests!
 - [ ] The Pokemon API is a slightly harder challenge because a single network request might not be enough to get all the data you need.
-- [ ] Running `npm` commands in the wrong folder will not work. **Be aware of what folder you're in** when working in the command line.
+- [x] Running `npm` commands in the wrong folder will not work. **Be aware of what folder you're in** when working in the command line.
 - [ ] The `start` process can sometimes choke after adding new dependencies and may need to be restarted.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
@@ -95,7 +104,7 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
 
-- [ ] Make the Character component more complex and break it into several subcomponents.
+- [x] Make the Character component more complex and break it into several subcomponents.
 - [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
 - [ ] Use Promise.all to resolve an array of promises.
 - [ ] Create transitions or animations with styled-components.

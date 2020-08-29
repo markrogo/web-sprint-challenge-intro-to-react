@@ -1,5 +1,14 @@
+body {
+  width: 60%;
+  margin: auto;
+  opacity: 0.9;
+}
+
 .App {
   text-align: center;
+  background-color: white;
+  width: 60 %;
+  margin: auto;
 }
 .Header {
   color: #443e3e;
